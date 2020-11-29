@@ -1,6 +1,7 @@
 ﻿body {
-    background: #1abc9c;
-    display: flex;
+    /*    background: #1abc9c;*/
+    background-image: url('https://i.imgur.com/Jmd34gL.gif');
+    background-size: cover;
     height: 100vh;
     align-content: center;
     justify-content: center;
@@ -22,14 +23,6 @@ h1, p {
         color: #f1c40f;
     }
 
-/*#squarefree {
-    font-family: Helvetica;
-    margin: 0 auto;
-    background: #5dc4de;
-    text-align: center;
-    font-weight: 600;
-    font-size: 15pt;
-}*/
 
 #bingotable {
     margin: 0 auto;
