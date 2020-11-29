@@ -8,13 +8,24 @@ connection2.on("RandomNum", function (index) {
     li.innerText = ('Aktuelt Bingonummer: ' + index);
     document.getElementById("joinedList").appendChild(li); // Sætter værdien for index ind i ul listen (Bullet list)
     console.log(index);
-
     const myNumbers = document.querySelectorAll("#bingotable tr td");
     for (const number of myNumbers) {
         if (number.innerText == index) {
             number.classList.add("CompletedSquare");
         }
     }
+    if (document.querySelectorAll(".CompletedSquare").length == 25) {
+        const li = document.createElement("li");
+        li.innerText = ("Bingo");
+        document.getElementById("joinedList").appendChild(li);
+        document.getElementById("StartBingo").disabled = true;
+    }
+    //for (const tr of document.querySelectorAll("#bingotable tr td")) {
+    //    console.log("Hello?");
+    //    if (tr.classList.contains(".CompletedSquare")) {
+    //        console.log("bingo?");
+    //    }
+    //}
 });
 
 connection2.start().then(function () {
